@@ -1,5 +1,6 @@
 package br.com.learn.pockafka.repository;
 
+import br.com.learn.pockafka.dto.JsonExemplo;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -7,13 +8,13 @@ import java.util.List;
 
 @Component
 public class MessageRepository {
-    private List<String> list = new ArrayList<>();
+    private List<JsonExemplo> list = new ArrayList<>();
 
-    public void addMessage(String message) {
+    public void addMessage(JsonExemplo message) {
         this.list.add(message);
     }
 
-    public String getAllMessages() {
-        return this.list.toString();
+    public List<JsonExemplo> getAllMessages() {
+        return this.list;
     }
 }

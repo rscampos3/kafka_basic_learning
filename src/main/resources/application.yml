@@ -16,4 +16,16 @@ myapp:
   kafka:
     topic: releaseKafkaTest
 
+logging:
+  level:
+    org:
+      springframework:
+        springframework: TRACE
+        web: DEBUG
+
+metadata:
+  max:
+    age:
+      ms: 60000
+
 
